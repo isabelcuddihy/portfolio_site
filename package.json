@@ -4,12 +4,12 @@
   "description": "Portfolio website for Isabel Cuddihy",
   "main": "index.html",
   "scripts": {
-    "start": "live-server --port=8080",
-    "build": "npm run build-css && npm run build-js && npm run build-html",
-    "build-css": "postcss styles.css -o dist/styles.css",
-    "build-js": "webpack --mode production",
-    "build-html": "cp index.html dist/index.html && cp projects.html dist/projects.html && cp contact.html dist/contact.html",
-    "predeploy": "npm run build",
+    "scripts": {
+      "build": "npm run build-css && npm run build-js && npm run build-html",
+      "build-css": "./node_modules/.bin/postcss styles.css -o dist/styles.css",
+      "build-js": "your-build-js-command",
+      "build-html": "your-build-html-command",
+      "predeploy": "npm run build",
     "deploy": "amplify publish"
   },
   "author": "Isabel Cuddihy",
@@ -18,7 +18,7 @@
     "live-server": "^1.2.0"
   },
   "devDependencies": {
-    "postcss": "^8.3.6",
+    "postcss": "^8.4.39",
     "webpack": "^5.65.0"
   },
   "repository": {
