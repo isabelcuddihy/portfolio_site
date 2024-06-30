@@ -8,7 +8,7 @@
     "build": "npm run build-css && npm run build-js && npm run build-html",
     "build-css": "postcss styles.css -o dist/styles.css",
     "build-js": "webpack --mode production",
-    "build-html": "cp index.html dist/index.html && cp projects.html dist/projects.html && cp contact.html dist/contact.html",  // Copy HTML files to dist
+    "build-html": "cp index.html dist/index.html && cp projects.html dist/projects.html && cp contact.html dist/contact.html",  
     "predeploy": "npm run build",
     "deploy": "amplify publish"
   },
