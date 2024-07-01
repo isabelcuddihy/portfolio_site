@@ -23,25 +23,12 @@ module.exports = {
             filename: 'index.html',
             chunks: ['main'], // specify which chunks to include if using multiple entry points
         }),
-        new HtmlWebpackPlugin({
-            template: './src/home.html', // adjust path if necessary
-            filename: 'home.html',
-            chunks: ['main'], // specify which chunks to include if using multiple entry points
-        }),
-        new HtmlWebpackPlugin({
-            template: './src/contact.html', // adjust path if necessary
-            filename: 'contact.html',
-            chunks: ['main'], // specify which chunks to include if using multiple entry points
-        }),
-        new HtmlWebpackPlugin({
-            template: './src/projects.html', // adjust path if necessary
-            filename: 'projects.html',
-            chunks: ['main'], // specify which chunks to include if using multiple entry points
-        }),
         new CopyWebpackPlugin({
             patterns: [
-                { from: 'src/styles.css', to: 'styles.css' },
-                // add more patterns as needed for other assets
+                { from: 'src/*.html', to: '[name].[ext]' }, // copy all HTML files from src folder
+                { from: 'src/*.css', to: '[name].[ext]' }, // copy all CSS files from src folder
+                { from: 'src/*.jpg', to: '[name].[ext]' }, // copy all JPG files from src folder
+                { from: 'src/*.png', to: '[name].[ext]' }, // copy all PNG files from src folder
             ],
         }),
     ],
