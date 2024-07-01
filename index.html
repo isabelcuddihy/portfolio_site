@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/styles.css">
+    <title>Welcome - Isabel Cuddihy</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #87CEEB;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            color: #191970;
+            position: relative;
+        }
+        .welcome-text {
+            font-size: 3rem;
+            position: relative;
+            z-index: 2;
+        }
+        .ripple-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            pointer-events: none;
+        }
+        .ripple-effect {
+            position: absolute;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            animation: ripple 3s ease-out;
+            z-index: 1;
+        }
+        @keyframes ripple {
+            0% {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(100);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="welcome-text">Welcome</div>
+<div class="ripple-container">
+    <div class="ripple-effect"></div>
+</div>
+<script>
+    setTimeout(function() {
+        window.location.href = "home.html"; // Adjusted to navigate to home.html
+    }, 3000);
+</script>
+</body>
+</html>

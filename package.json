@@ -2,13 +2,13 @@
   "name": "personal_portfolio",
   "version": "1.0.0",
   "description": "Portfolio website for Isabel Cuddihy",
-  "main": "src/index.html",
+  "main": "src/home.html",
   "scripts": {
     "build-css": "postcss src/styles.css -o dist/styles.css",
     "build-js": "webpack --mode production",
     "build-html": "cp src/*.html dist/",
     "build": "npm run build-css && npm run build-js && npm run build-html",
-    "start": "live-server dist"
+    "start": "live-server dist/home.html"
   },
   "author": "Isabel Cuddihy",
   "license": "MIT",

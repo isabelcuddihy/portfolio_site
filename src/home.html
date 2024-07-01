@@ -4,7 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Home - Isabel Cuddihy</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* Light background color */
+            color: #333; /* Dark text color */
+        }
+        header {
+            background-color: #87CEEB; /* Header background color */
+            color: #000000; /* Header text color */
+            padding: 20px; /* Padding around header content */
+            text-align: center;
+        }
+        .container {
+            max-width: 960px; /* Maximum width of content */
+            margin: 20px auto; /* Center content horizontally with some margin */
+            padding: 0 20px; /* Padding around content */
+        }
+        .profile-photo {
+            max-width: 100%; /* Responsive image */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px; /* Rounded corners for the image */
+        }
+        .about-text {
+            margin-top: 20px; /* Space below the image */
+        }
+        footer {
+            background-color: #333; /* Footer background color */
+            color: #fff; /* Footer text color */
+            text-align: center;
+            padding: 10px 0; /* Padding top and bottom */
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <title>Isabel Cuddihy's Portfolio</title>
 </head>
 <body>
 <header>
@@ -22,24 +58,23 @@
     </div>
 </header>
 
-
-<main>
-
+<main class="container">
     <section id="about" class="about-me">
         <div class="about-content">
-            <img src="../IMG_6922%20copy.JPG" alt="Isabel Cuddihy" class="profile-photo" width="350" height="500">
-
+            <img src="IMG_6922 copy.jpg" alt="Isabel Cuddihy" class="profile-photo" width="400" height="600">
             <div class="about-text">
                 <h2>About Me</h2>
                 <p>I am a budding software developer, passionate about combining creativity and technology. With 8 years of experience in the television industry and currently working towards a Masters in Computer Science from Northeastern University. I offer a unique combination of technical and creative skills allowing me to find a new solution to any challenging problem.</p>
             </div>
         </div>
     </section>
-
 </main>
+
 <footer>
     <p>&copy; 2024 Isabel Cuddihy. All rights reserved.</p>
 </footer>
+
 <script src="script.js"></script>
+<script src="slideshow.js"></script> <!-- Include slideshow.js for the falling binary effect -->
 </body>
 </html>
