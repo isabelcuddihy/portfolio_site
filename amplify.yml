@@ -1,0 +1,18 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm ci
+    build:
+      commands:
+        - export PATH=./node_modules/.bin:$PATH  # Add node_modules/.bin to PATH
+        - npx postcss --version  # Verify postcss is installed and accessible
+        - npm run build
+  artifacts:
+    baseDirectory: dist
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/* 
