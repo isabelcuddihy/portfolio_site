@@ -19,7 +19,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: 'index.html', // adjust path if necessary
+            template: './src/index.html', // adjust path if necessary
             filename: 'index.html',
             chunks: ['main'], // specify which chunks to include if using multiple entry points
         }),
