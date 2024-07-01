@@ -83,20 +83,24 @@ header nav ul li a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px; /* Add margin to bottom */
 }
 
 .about-content {
     display: flex;
     align-items: center;
+    margin-right: 20px; /* Add margin to the right of the content */
 }
 
 .about-text {
     flex: 1;
+    padding-right: 20px; /* Add padding to the right of the text */
 }
 
 .about-text h2 {
-    margin-top: 0; /* Remove default margin */
+    margin-top: 0;
 }
+
 
 
 /* Mini binary digit styles */
