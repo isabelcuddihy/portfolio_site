@@ -25,37 +25,6 @@
             width: calc(33.33% - 20px); /* Adjust width to fit 3 images per row with gap */
         }
 
-        .video-container {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .video-thumbnail {
-            position: relative;
-            display: inline-block;
-        }
-
-        .video-thumbnail video {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .play-button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: rgba(28, 15, 64, 0.49);
-            color: #eae0ff;
-            border: none;
-            font-size: 24px;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            cursor: pointer;
-        }
     </style>
 
 </head>
@@ -121,16 +90,7 @@
                     <img src="Photo_Album_Java_Image_HTML_Export_with_Name.png" alt="Photo Album Java Image HTML Export with Name - showcasing html export option with enter export file name pop up">
 
                 </div>
-                <div class="video-container">
-                    <h3>Video Demo</h3>
-                    <div class="video-thumbnail">
-                        <video id="demo-video" controls poster="Shape_Album_Demo.jpg">
-                            <source src="Shape_Album_Demo.mov" type="video/quicktime">
-                            Your browser does not support the video tag.
-                        </video>
-                        <button class="play-button" onclick="togglePlayPause()">&#9658;</button>
-                    </div>
-                </div>
+
             </div>
             <ul>
                 <li><strong>Technologies Used:</strong> Java, Swing, HTML, SVG</li>
@@ -185,25 +145,6 @@
 </footer>
 
 <script src="script.js"></script>
-<script>
-    var video = document.getElementById('demo-video');
-    var playButton = document.querySelector('.play-button');
-
-    function togglePlayPause() {
-        if (video.paused || video.ended) {
-            video.play();
-            playButton.innerHTML = '&#10074;&#10074;'; // Pause icon
-        } else {
-            video.pause();
-            playButton.innerHTML = '&#9658;'; // Play icon
-        }
-    }
-
-    // Update button appearance when video ends
-    video.onended = function() {
-        playButton.innerHTML = '&#9658;'; // Reset to play icon
-    };
-</script>
 
 </body>
 </html>
