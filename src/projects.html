@@ -3,61 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="script-src 'sha256-rDzZ88V/LX9wCT4c03R1jLhTDZI8585conBDPIs87OI=' 'strict-dynamic'; object-src 'none'; base-uri 'none';">
-    <title>Isabel Cuddihy - Software Developer Portfolio</title>
-    <meta name="description" content="Welcome to Isabel Cuddihy's portfolio showcasing software development projects. Explore Isabel's skills in software design and development.">
-    <script type="application/ld+json">
-        {
-            "@context": "http://schema.org",
-            "@type": "Person",
-            "name": "Isabel Cuddihy",
-            "jobTitle": "Software Developer",
-            "url": "https://www.isabelcuddihy.com",
-            "sameAs": [
-                "https://www.linkedin.com/in/isabel-cuddihy-2aa63345"
-
-            ]
-        }
-    </script>
-
+    <title>Isabel Cuddihy - Software Developer Projects</title>
+    <meta name="description" content="Explore Isabel Cuddihy's portfolio showcasing various programming projects. Contact Isabel for software development opportunities and additional information.">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'sha256-pZ2e6TUahAmC27ZF7TcHte+86kop4DN7b7x7ApTxbVQ=' 'strict-dynamic'; object-src 'none'; base-uri 'none';">
     <link rel="stylesheet" href="styles.css">
+    <title>Projects - Isabel Cuddihy</title>
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0; /* Light background color */
-            color: #333; /* Dark text color */
+        /* Additional styles for the project images */
+        .project-images {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
         }
-        header {
-            background-color: #87CEEB; /* Header background color */
-            color: #000000; /* Header text color */
-            padding: 20px; /* Padding around header content */
-            text-align: center;
-        }
-        .container {
-            max-width: 960px; /* Maximum width of content */
-            margin: 20px auto; /* Center content horizontally with some margin */
-            padding: 0 20px; /* Padding around content */
-        }
-        .profile-photo {
-            max-width: 100%; /* Responsive image */
-            height: auto; /* Maintain aspect ratio */
-            border-radius: 10px; /* Rounded corners for the image */
-        }
-        .about-text {
-            margin-top: 20px; /* Space below the image */
-        }
-        footer {
-            background-color: #333; /* Footer background color */
-            color: #fff; /* Footer text color */
-            text-align: center;
-            padding: 10px 0; /* Padding top and bottom */
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+
+        .project-images img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: calc(33.33% - 20px); /* Adjust width to fit 3 images per row with gap */
         }
     </style>
-    <title>Isabel Cuddihy's Portfolio</title>
 </head>
 <body>
 <header>
@@ -75,16 +42,95 @@
     </div>
 </header>
 
-<main class="container">
-    <section id="about" class="about-me">
-        <div class="about-content">
-            <img src="IMG_6922 copy.jpg" alt="Isabel Cuddihy" class="profile-photo" width="400" height="600">
-            <div class="about-text">
-                <h2>About Me</h2>
-                <p>I am a budding software developer, passionate about combining creativity and technology. With 8 years of experience in the television industry and currently working towards a Masters in Computer Science from Northeastern University. I offer a unique combination of technical and creative skills allowing me to find a new solution to any challenging problem. I'm passionate about exploring and experimenting with new technologies and enjoying expanding my skills in Generative AI, Cloud Computing and more!</p>
+<main>
+    <section class="projects">
+        <div class="project">
+            <h2>Mastermind Game</h2>
+            <p>Mastermind Color Matching Game challenges players to decode a randomly generated 4-color sequence within 10 attempts. Players select colors by clicking circles at the bottom of the screen and confirming their choices with a check-mark button.</p>
+            <p>Developing this game posed unique challenges, particularly in leveraging the Python Turtle library. Working within the constraints of Python's standard library and the Turtle graphics module required meticulous planning and creativity. Overcoming these challenges involved extensive reading of documentation, experimentation, and conducting additional research to optimize functionality and performance.</p>
+            <p>Two unique features of this project include:</p>
+            <ul>
+                <li>Leaderboard Integration: The game features an integrated leaderboard that updates in real-time after each session, showcasing players' best scores.</li>
+                <li>Color Feedback System: Each guess prompts feedback in the form of hints—red indicating correct color but wrong position, and black indicating correct color and correct position.</li>
+            </ul>
+            <p>Looking ahead, future possibilities for the game include enhanced user interface design, multiplayer mode implementation, and expanded difficulty levels to cater to a broader audience.</p>
+            <div class="project-details">
+                <a href="https://github.com/isabelcuddihy/project_portfolio/commit/29bbeabb89d703edd5f9eaf6ad8316f4c159ad3d" target="_blank" class="github-link">GitHub Repository</a>
+                <div class="project-images">
+                    <img src="Mastermind-EnterPlayerName.png" alt="Mastermind Enter Player Name - showcasing main game page with enter player pop up">
+                    <img src="Mastermind_Win_Event.png" alt="Mastermind Player Wins - showcasing main game page after win event with winner pop up">
+                    <img src="Mastermind_Lose_Event.png" alt="Mastermind Player Loses - - showcasing main game page after win event with lose game pop up">
+                </div>
+            </div>
+            <ul>
+                <li><strong>Technologies Used:</strong> Python, Turtle Graphics Library</li>
+                <li><strong>Challenges:</strong> Overcoming limitations of Python's standard library for game graphics</li>
+                <li><strong>Unique Features:</strong> Real-time leaderboard updates, color feedback system</li>
+                <li><strong>Reflection:</strong> Building this game enhanced my Python skills and game development capabilities. The turtle library took some getting used to, but It has sparked my curiousity into researching other available libraries such as PyGame and Arcade. Now that I have an understanding of building a simple game in Python, I'd like to try to build something more complex, but use a different library.</li>
+            </ul>
+        </div>
 
-                <h2>About This Site</h2>
-                <p>Built with HTML/CSS/JavaScript, powered by ChatGPT, hosted on AWS Amplify. To learn more about the process I used, head over to my projects page!</p>
+        <div class="project">
+            <h2>Shape Image Album</h2>
+            <p>The Shape Image Album project utilizes the Java Swing library to create and manage collections of images composed of various shapes. It reads information from a text file and translates it into graphical representations displayed in a user-friendly interface.</p>
+            <p>During development, significant challenges included mastering the basics of HTML and SVG, in addition to Java Swing, to achieve the desired GUI appearance and HTML export functionality. This required a blend of learning through practical application, documentation study, and experimentation.</p>
+            <p>Two standout features of this project are:</p>
+            <ul>
+                <li>Pop-up Warning: A user-friendly pop-up warning notifies users when their image album at the beginning or end (i.e. no further images to view in previous or next buttons)</li>
+                <li>HTML Export: Users can export their image collections to uniquely named HTML files directly from the GUI album, facilitating easy sharing and showcasing of curated collections.</li>
+            </ul>
+            <p>Future enhancements for the Shape Image Album project include implementing dynamic shape addition to the canvas, akin to functionalities found in graphic design software like Microsoft Paint. This would expand user creativity and functionality within the application.</p>
+            <div class="project-details">
+                <a href="https://github.com/isabelcuddihy/Shape_Album" target="_blank" class="github-link">GitHub Repository</a>
+                <div class="project-images">
+                    <img src="Photo_Album_Java_Image2.png" alt="Photo Album Java Image 2 - showcasing main shape album with full size image view">
+                    <img src="Photo_Album_Java_Image_EndofAlbum.png" alt="Photo Album Java Image End of Album - showcasing shape album with end of album pop up">
+                    <img src="Photo_Album_Java_Image_HTML_Export_with_Name.png" alt="Photo Album Java Image HTML Export with Name - showcasing html export option with enter export file name pop up">
+                </div>
+            </div>
+            <ul>
+                <li><strong>Technologies Used:</strong> Java, Swing, HTML, SVG</li>
+                <li><strong>Challenges:</strong> Mastering HTML and SVG for GUI appearance and export functionality</li>
+                <li><strong>Unique Features:</strong> Pop-up warning for end/beginning of album, HTML export feature</li>
+                <li><strong>Reflection:</strong> Developing this project improved my Java Swing skills and understanding of graphical user interfaces. I also structured the entire project using MVC (Model-View_controller) architecture. Building it helped me gain a greater understanding of how the different parts work together and see the benefits and disadvantages of separating the tasks of each class. In the future, I'd love to add the ability to insert additional shapes on the fly or change the colors of specific shapes instead of uploading a whole next textual document. </li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <h2>BBC File Renamer</h2>
+            <p>The BBC File Renamer project was developed to solve a business challenge of renaming thousands of caption files to specific and unique conventions for delivery to media partners. Often, the same files needed to go to multiple partners but with different names. By automating the renaming process, the project aimed to eliminate human-error from mistyping and drastically reduce the time required to rename large amounts of files.</p>
+            <p>Key challenges included creating a simple terminal interface to allow other users to easily rename files based on the media partner's name. The program executes the rename function across all valid files in the designated folder after receiving input.</p>
+            <p>Another significant challenge was integrating the archive caption project with this program to utilize a base filename and enable rapid auto-renaming of thousands of files to match the required style. The caption archive was successfully expanded to over 50,000 assets, ensuring adherence to proper naming conventions.</p>
+            <p>Future plans for the BBC File Renamer project include adding functionality for renaming video files, incorporating metadata tags, and integrating the program with a larger Content Management System (CMS) for instant export of correctly formatted captions.</p>
+            <div class="project-details">
+                <a href="https://github.com/isabelcuddihy/BBC_File_Renamer" target="_blank" class="github-link">GitHub Repository</a>
+                <div class="project-images">
+                    <img src="Terminal Interface.png" alt="BBC File Renamer Image 1 - showcasing terminal view of enter partner name functionality">
+                    <img src="Files Renamed.png" alt="BBC File Renamer Image 3 - showcasing files after they are renamed">
+                </div>
+            </div>
+            <ul>
+                <li><strong>Technologies Used:</strong> Python, Command-line Interface (CLI)</li>
+                <li><strong>Challenges:</strong> Creating a simple terminal interface for file renaming</li>
+                <li><strong>Unique Features:</strong> Automated file renaming based on partner's name, integration with caption archive</li>
+                <li><strong>Reflection:</strong> This project enhanced my scripting skills and ability to manage large-scale file operations efficiently. It also added tremendous business value to the Digital Operations team and is still in use at BBC Studios (as of 2024)</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <h2>Personal Portfolio Site</h2>
+            <p>My personal website showcasing my portfolio, built using HTML, CSS, and JavaScript. Integrated with ChatGPT for enhanced user experience and hosted on AWS Amplify.</p>
+            <ul>
+                <li><strong>Technologies Used:</strong> HTML, CSS, JavaScript, ChatGPT, AWS Amplify, Cloud Server Hosting/Integration</li>
+                <li><strong>Challenges:</strong> Overcoming integration challenges with ChatGPT and configuring AWS Amplify for reliable hosting.</li>
+                <li><strong>Unique Features:</strong> Responsive design, seamless user experience, particularly the falling binary code animation in the header and the Welcome water droplet are features I enjoyed building</li>
+                <li><strong>Reflection:</strong> Building this website strengthened my skills in frontend development and AI integration, paving the way for future innovative projects. Additionally, it allowed me to express more of my creativity despite not knowing all the methods used when I was designing the site. I was able to learn a lot of new techniques and concepts through my experimentation and interaction with ChatGPT.</li>
+            </ul>
+            <div class="project-details">
+                <a href="https://github.com/isabelcuddihy/portfolio_site" target="_blank" class="github-link">GitHub Repository</a>
+                <div class="project-images">
+                    <img src="Welcome_Droplet.png" alt="Welcome Rain Droplet Landing Page - showcasing still image of animated rain droplet welcome page">
+                </div>
             </div>
         </div>
     </section>
@@ -95,6 +141,5 @@
 </footer>
 
 <script src="script.js"></script>
-<script src="slideshow.js"></script> <!-- Include slideshow.js for the falling binary effect -->
 </body>
 </html>
