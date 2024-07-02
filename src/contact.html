@@ -3,8 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'sha256-hRRKKuje+GZU1XeG/x3W5lC3qX/fHOB8RNBamrf5i14=' 'strict-dynamic'; object-src 'none'; base-uri 'none';">
     <link rel="stylesheet" href="styles.css">
     <title>Contact - Isabel Cuddihy</title>
+    <meta name="description" content="Contact Isabel Cuddihy for software development opportunities or questions about projects showcased.">
+    <script>
+        function validateForm() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+
+            if (name === "" || email === "" || message === "") {
+                alert("Please fill out all fields.");
+                return false;
+            }
+            return true;
+        }
+    </script>
 </head>
 <body>
 <header>
@@ -31,13 +46,12 @@
             <div class="linkedin-contact">
                 <p>Contact me on LinkedIn:</p>
                 <a href="https://www.linkedin.com/in/isabel-cuddihy-2aa63345" class="linkedin-button" target="_blank">
-                    <img src="" alt="LinkedIn">
+                    <img src="linkedin-icon.png" alt="LinkedIn">
                 </a>
             </div>
 
             <div class="email-contact">
-                <form action="mailto:isabelcuddihy@gmail.com" method="post" enctype="text/plain">
-                    <label>Contact me via email:</label><br>
+                <form action="mailto:isabelcuddihy@gmail.com" method="post" enctype="text/plain" onsubmit="return validateForm();">
                     <label for="name">Name:</label><br>
                     <input type="text" id="name" name="name" required><br>
                     <label for="email">Email:</label><br>
@@ -50,8 +64,8 @@
         </div>
 
     </section>
-
 </main>
+
 <footer>
     <p>&copy; 2024 Isabel Cuddihy. All rights reserved.</p>
 </footer>
