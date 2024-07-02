@@ -36,3 +36,20 @@ document.addEventListener('DOMContentLoaded', function() {
         animateMiniBinaryDigits();
     }, 500); // Adjust delay as needed
 });
+var video = document.getElementById('demo-video');
+var playButton = document.querySelector('.play-button');
+
+function togglePlayPause() {
+    if (video.paused || video.ended) {
+        video.play();
+        playButton.innerHTML = '&#10074;&#10074;'; // Pause icon
+    } else {
+        video.pause();
+        playButton.innerHTML = '&#9658;'; // Play icon
+    }
+}
+
+// Update button appearance when video ends
+video.onended = function() {
+    playButton.innerHTML = '&#9658;'; // Reset to play icon
+};
